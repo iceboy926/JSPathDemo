@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <JSPatchPlatform/JSPatch.h>
+
+#define APP_KEY     @"c81260c14f0dc019"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [JSPatch startWithAppKey:APP_KEY];
+    
+    [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
+        
+        NSLog(@"type = %d", type);
+        NSLog(@"data is %@", data);
+        NSLog(@"error is %@", error);
+        
+    }];
+    
+    
+    [JSPatch setupDevelopment];
+    
+    
+    [JSPatch sync];
+    
+    
     return YES;
 }
 

@@ -13,6 +13,10 @@
 		10D0DEB21DAF542700D847ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D0DEB01DAF542700D847ED /* Main.storyboard */; };
 		10D0DEB41DAF542700D847ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D0DEB31DAF542700D847ED /* Assets.xcassets */; };
 		10D0DEB71DAF542700D847ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D0DEB51DAF542700D847ED /* LaunchScreen.storyboard */; };
+		10D0DEBF1DAF55AE00D847ED /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D0DEBE1DAF55AE00D847ED /* JSPatchPlatform.framework */; };
+		10D0DEC11DAF55E500D847ED /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D0DEC01DAF55E500D847ED /* libz.tbd */; };
+		10D0DEC31DAF55FE00D847ED /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D0DEC21DAF55FE00D847ED /* JavaScriptCore.framework */; };
+		10D0DEC51DAF585700D847ED /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 10D0DEC41DAF585700D847ED /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		10D0DEB31DAF542700D847ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10D0DEB61DAF542700D847ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10D0DEB81DAF542700D847ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10D0DEBE1DAF55AE00D847ED /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSPatchPlatform.framework; path = JSPathUpdate/JSPatchPlatform.framework; sourceTree = "<group>"; };
+		10D0DEC01DAF55E500D847ED /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		10D0DEC21DAF55FE00D847ED /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		10D0DEC41DAF585700D847ED /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D0DEC31DAF55FE00D847ED /* JavaScriptCore.framework in Frameworks */,
+				10D0DEC11DAF55E500D847ED /* libz.tbd in Frameworks */,
+				10D0DEBF1DAF55AE00D847ED /* JSPatchPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,9 @@
 		10D0DE9B1DAF542600D847ED = {
 			isa = PBXGroup;
 			children = (
+				10D0DEC21DAF55FE00D847ED /* JavaScriptCore.framework */,
+				10D0DEC01DAF55E500D847ED /* libz.tbd */,
+				10D0DEBE1DAF55AE00D847ED /* JSPatchPlatform.framework */,
 				10D0DEA61DAF542600D847ED /* JSPathUpdate */,
 				10D0DEA51DAF542600D847ED /* Products */,
 			);
@@ -60,6 +74,7 @@
 			children = (
 				10D0DEAA1DAF542600D847ED /* AppDelegate.h */,
 				10D0DEAB1DAF542600D847ED /* AppDelegate.m */,
+				10D0DEC41DAF585700D847ED /* main.js */,
 				10D0DEAD1DAF542600D847ED /* ViewController.h */,
 				10D0DEAE1DAF542600D847ED /* ViewController.m */,
 				10D0DEB01DAF542700D847ED /* Main.storyboard */,
@@ -139,6 +154,7 @@
 				10D0DEB71DAF542700D847ED /* LaunchScreen.storyboard in Resources */,
 				10D0DEB41DAF542700D847ED /* Assets.xcassets in Resources */,
 				10D0DEB21DAF542700D847ED /* Main.storyboard in Resources */,
+				10D0DEC51DAF585700D847ED /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +279,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPathUpdate",
+				);
 				INFOPLIST_FILE = JSPathUpdate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -275,6 +295,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPathUpdate",
+				);
 				INFOPLIST_FILE = JSPathUpdate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

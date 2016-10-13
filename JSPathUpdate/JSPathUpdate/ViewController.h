@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak)IBOutlet UILabel *textLabel;
+
+@property (nonatomic, weak)IBOutlet UILabel *label;
+
+@property (nonatomic, weak)IBOutlet UIButton *changeBtn;
 
 @end
 
